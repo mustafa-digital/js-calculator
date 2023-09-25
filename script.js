@@ -42,3 +42,6 @@ function operate(num1, operator, num2) {
 let num1;
 let num2;
 let operator;
+
+const display = document.getElementById("display");
+display.value = "Hello";
