@@ -6,15 +6,15 @@ const DIVIDE = "/";
 const MAX_DISPLAY_LENGTH = 17;
 
 function add(num1, num2) {
-    return num1 + num2;
+    return (num1 + num2);
 }
 
 function subtract(num1, num2) {
-    return num1 - num2;
+    return (num1 - num2);
 }
 
 function multiply(num1, num2) {
-    return num1 * num2;
+    return (num1 * num2);
 }
 
 function divide(num1, num2) {
@@ -22,7 +22,7 @@ function divide(num1, num2) {
         alert("You can't divide by zero, bruh!");
         return 0;
     } 
-    return num1 / num2;
+    return (num1 / num2);
 }
 
 function operate(num1, operator, num2) {
@@ -66,6 +66,10 @@ function opButtonFunction(event) {
     else {
         num2 = Number(display.value);
         num1 = operate(num1, operator, num2);
+        console.log(num1.toString().length);
+        if (num1.toString().length > MAX_DISPLAY_LENGTH) {
+            num1 = num1.toExponential(num1.toString().length - MAX_DISPLAY_LENGTH + 1);
+        }
         display.value = num1;
         clearDisplayOnNextButton = true;
 
@@ -94,6 +98,10 @@ function equalButtonFunction(event) {
     if (num1 && operator != "") {
         num2 = Number(display.value);
         result = operate(num1, operator, num2);
+        console.log(result.toString().length);
+        if (result.toString().length > MAX_DISPLAY_LENGTH) {
+            result = parseFloat(result).toExponential(10);
+        }
         display.value = result;
 
         num1 = null;
