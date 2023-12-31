@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    height: 600px;
+    width: 350px;
+    background-color: gray;
+    display: grid;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 100px;
+
+}
+
+.calculator {
+    display: grid;
+
+}
+
+.display {
+    height: 50px;
+    width: 300px;
+}
+
+.display > input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 1200;
+}
+
+.num-button,
+.operator,
+.clear-button {
+    height: 50px;
+    width: 50px;
+}
+ */

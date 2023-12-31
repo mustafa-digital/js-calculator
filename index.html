@@ -4,38 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="output.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="title">Calculator</div>
-    <div class="calculator">
-        <div class="display">
-            <input type="text" id="display" name="display" readonly style="text-align: right">
-        </div>
 
-        <div class="buttons">
-            <div class="number-buttons">
-                <button class="button-1">1</button>
-                <button class="button-2">2</button>
-                <button class="button-3">3</button>
-                <button class="button-4">4</button>
-                <button class="button-5">5</button>
-                <button class="button-6">6</button>
-                <button class="button-7">7</button>
-                <button class="button-8">8</button>
-                <button class="button-9">9</button>
-                <button class="button-0">0</button>
+    <div class="relative flex justify-center items-center h-screen bg-gray-500 w-full min-w-[450px] min-h-screen">
+        <div class="container bg-zinc-800 h-2/3 min-h-[400px] w-1/4 min-w-[380px] rounded-xl p-4 pt-3 pb-10">
+            <div class="w-full flex items-center gap-x-1">
+                <img src="./assets/171352_calculator_icon.png" alt="calculator icon" class="inline-block w-8">
+                <h1 class="text-zinc-200 mb-1">Calculator</h1>
             </div>
-            <div class="operator-buttons">
-                <button class="operator+">+</button>
-                <button class="operator-">-</button>
-                <button class="operator*">*</button>
-                <button class="operator/">/</button>
+            <div class="calculator h-full grid grid-rows-[4rem_1fr] mt-2">
+                <div class="display w-full">
+                    <input 
+                    type="text" 
+                    id="display" 
+                    name="display" 
+                    style="text-align:right" 
+                    value="0"
+                    readonly
+                    class="h-full w-full p-2 bg-zinc-400 text-zinc-800 rounded text-4xl">
+                </div>
+                <div class="py-4">
+                    <div class="operation-buttons w-full grid grid-rows-5 grid-cols-4 gap-1 h-full">
+                        <!-- clear button -->
+                        <button class="clear-button col-span-2 row-span-1 bg-red-600 hover:bg-red-500 text-zinc-800 w-full rounded p-2 text-2xl">A/C</button>
+
+                        <!-- negative button -->
+                        <button class="sign col-span-1 row-span-1 text-2xl bg-purple-700 hover:bg-purple-600 text-zinc-800 w-full rounded">+/-</button>
+
+                        <!-- operator buttons -->
+                        <div class="operator-buttons col-span-1 row-span-5 grid-cols-subgrid grid gap-1">
+                            <button class="operator col-span-1 row-span-1 / text-2xl bg-purple-700 hover:bg-purple-600 text-zinc-800 w-full rounded">/</button>
+                            <button class="operator col-span-1 row-span-1 * text-2xl bg-purple-700 hover:bg-purple-600 text-zinc-800 w-full rounded">*</button>
+                            <button class="operator col-span-1 row-span-1 - text-2xl bg-purple-700 hover:bg-purple-600 text-zinc-800 w-full rounded">-</button>
+                            <button class="operator col-span-1 row-span-1 + text-2xl bg-purple-700 hover:bg-purple-600 text-zinc-800 w-full rounded">+</button>
+                            <button class="operator col-span-1 row-span-1 equal text-2xl bg-blue-700 hover:bg-blue-500 text-zinc-800 w-full rounded">=</button>
+                        </div>    
+
+                        <!-- number buttons -->
+                        <div class="number-buttons w-full col-span-3 row-span-4 grid-cols-subgrid grid grid-rows-4 grid-cols-3 gap-1">
+                            <button class="num-button 7 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">7</button>
+                            <button class="num-button 8 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">8</button>
+                            <button class="num-button 9 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">9</button>
+                            <button class="num-button 4 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">4</button>
+                            <button class="num-button 5 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">5</button>
+                            <button class="num-button 6 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">6</button>
+                            <button class="num-button 1 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">1</button>
+                            <button class="num-button 2 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">2</button>
+                            <button class="num-button 3 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">3</button>
+                            <button class="num-button 0 p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded col-span-2 text-2xl">0</button>
+                            <button class="decimal p-2 bg-yellow-500 hover:bg-yellow-300 text-zinc-800 w-full rounded text-2xl">.</button>
+                        </div>
+
+                </div>
             </div>
-            <button class="clear-button">Clr</button>
         </div>
+        </div>
+        <footer class="fixed bottom-0 w-full h-5 flex items-center gap-2 justify-center">
+            <span class="text-zinc-800 shadow-sm">Made by</span>
+            <span class="flex justify-center gap-2">
+                <a href="https://github.com/mustafa-digital">
+                    <img src="./assets/github.svg" alt="github logo" class="relative w-5">
+                </a>
+                <a href="https://github.com/mustafa-digital" class="text-zinc-800 shadow-sm">mustafa-digital</a>
+            </span>
+        </footer>
     </div>
-
-    
 </body>
 </html>
