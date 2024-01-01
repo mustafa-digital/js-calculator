@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Calculator App</title>
     <link rel="stylesheet" href="output.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
     <div class="relative flex justify-center items-center h-screen bg-gray-500 w-full min-w-[450px] min-h-screen">
+
+        <!-- calculator container -->
         <div class="container bg-zinc-800 h-2/3 min-h-[400px] w-1/4 min-w-[380px] rounded-xl p-4 pt-3 pb-10">
+
+            <!-- calculator header -->
             <div class="w-full flex items-center gap-x-1">
                 <img src="./assets/171352_calculator_icon.png" alt="calculator icon" class="inline-block w-8">
                 <h1 class="text-zinc-200 mb-1">Calculator</h1>
             </div>
+
+            <!-- calculator div -->
             <div class="calculator h-full grid grid-rows-[4rem_1fr] mt-2">
+
+                <!-- input display  -->
                 <div class="display w-full">
                     <input 
                     type="text" 
@@ -24,8 +32,10 @@
                     style="text-align:right" 
                     value="0"
                     readonly
-                    class="h-full w-full p-2 bg-zinc-400 text-zinc-800 rounded text-4xl">
+                    class="calc-display h-full w-full p-2 bg-zinc-400 text-zinc-800 rounded text-4xl">
                 </div>
+
+                <!-- button display -->
                 <div class="py-4">
                     <div class="operation-buttons w-full grid grid-rows-5 grid-cols-4 gap-1 h-full">
                         <!-- clear button -->
@@ -62,6 +72,8 @@
             </div>
         </div>
         </div>
+
+        <!-- footer  -->
         <footer class="fixed bottom-0 w-full h-5 flex items-center gap-2 justify-center">
             <span class="text-zinc-800 shadow-sm">Made by</span>
             <span class="flex justify-center gap-2">

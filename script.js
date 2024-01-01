@@ -98,9 +98,8 @@ function equalButtonFunction(event) {
     if (num1 && operator != "") {
         num2 = Number(display.value);
         result = operate(num1, operator, num2);
-        console.log(result.toString().length);
         if (result.toString().length > MAX_DISPLAY_LENGTH) {
-            result = parseFloat(result).toExponential(10);
+            result = parseFloat(result).toExponential(result.toString().length - MAX_DISPLAY_LENGTH + 1);
         }
         display.value = result;
 
